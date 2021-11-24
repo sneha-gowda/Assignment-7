@@ -1,6 +1,11 @@
 // This function should return the BMI for a person 
 function BMICalculator(mass, height) {
     // Write your code here
+    if(isNaN(mass) || isNaN(height) || mass<=0 || height<=0){
+        return "INVALID INPUT";
+    }
+
+    return mass/(height*height);
 }
 
 module.exports = BMICalculator;
